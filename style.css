@@ -1,8 +1,24 @@
+:root{
+    --bg-color: #000;
+    --text-color: #fff;
+    --secondary-text: lightGray;
+    --card-bg: #0e0e0e;
+    --header-bg: #000;
+    --card-border: #222;
+}
+.light-theme{
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --secondary-text: #4b5563;
+    --card-bg:#f3f4f6;
+    --card-border: #d1d5db;
+    --header-bg: #ffffff;
+}
 body{
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
+    background: var(--bg-color);
+    color: var(--text-color);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
@@ -14,16 +30,28 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #000;
+    background-color: var(--header-bg);
     z-index: 1000;
 }
 header nav{
-    position: relative;
+    /* position: relative; */
     padding:20px 40px 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#theme-toggle{
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 24px;
 }
 header nav h2{
     margin: 0;
     padding-left: 40px;
+    color: var(--text-color);
 }
 header nav::after{
     content: "";
@@ -57,7 +85,7 @@ main{
     font-size: 52px;
     /* font-weight: 700; */
     margin-bottom: 10px;
-    color: #fff;
+    color: var(--text-color);
 }
 .Hero h3{
     font-size: 26px;
@@ -65,7 +93,7 @@ main{
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
-    color: lightgray;
+    color: var(--secondary-text);
 }
 .Hero h3::after{
     content: "";
@@ -80,17 +108,19 @@ main{
 .Hero p{
     max-width: 50%;
     font-size: 18px;
-    color: lightgray;
+    color: var(--secondary-text);
     line-height: 1.6;
     margin-bottom: 12px;
 }
-.Hero button{
+.btn-link{
+    display: inline-block;
     padding: 12px 22px;
-    font-size: 16px;
     border-radius: 6px;
+    text-decoration: none;
     cursor: pointer;
     margin-right: 12px;
     margin-top: 15px;
+    font-size: 16px;
 }
 .btn-primary{
     background: #2563eb;
@@ -115,10 +145,11 @@ main{
 .section-title{
     font-size: 52px;
     margin: 0;
+    color: var(--text-color);
 }
 .section-subtitle{
     font-size: 18px;
-    color: lightgray;
+    color: var(--secondary-text);
     position: relative;
     display: block;
     padding-bottom: 16px;
@@ -141,8 +172,8 @@ main{
     gap: 40px;
 }
 .project-card{
-    background: #0e0e0e;
-    border: 1px solid #222;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     /* padding: 20px; */
     max-width:  100%;
@@ -166,10 +197,11 @@ main{
     font-size: 25px;
     margin-bottom: 10px;
     font-weight: 500;
+    color: var(--text-color);
 }
 .project-desc{
     font-size: 16px;
-    color: lightgray;
+    color: var(--secondary-text);
     line-height: 1.6;
     margin-bottom: 10px;
 }
@@ -178,8 +210,8 @@ main{
     margin: 5px 6px 10px 0;
     padding: 5px 10px ;
     font-size: 14px;
-    color: white;
-    border: 1px solid #333;
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
     border-radius: 15px;
     font-weight: 400;
 }
@@ -190,7 +222,7 @@ main{
     text-decoration: none;
     border-radius: 6px;
     font-size: 14px;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 400;
 }
 .project-links a i{
@@ -216,7 +248,7 @@ main{
     padding: 8px 16px 8px 0;
     border-radius: 6px;
     font-size: 25px;
-    color: #fff;
+    color: var(--text-color);
     justify-content: flex-start;
 }
 .tech-container i{
@@ -232,8 +264,8 @@ main{
     margin-top: 80px;
 }
 .connect-card{
-    background: #0e0e0e;
-    border: 1px solid #222;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 10px;
     padding: 20px ;
 }
@@ -242,7 +274,7 @@ main{
     align-items: center;
     gap: 10px;
     font-size: 25px;
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     margin-bottom: 8px;
 }
@@ -252,7 +284,7 @@ main{
 }
 .connect-card p{
     margin: 0;
-    color: rgb(211, 211, 211);
+    color: var(--secondary-text);
     font-size: 16px;
 }
 .connect-card:hover{
@@ -263,9 +295,38 @@ main{
 footer{
     padding: 40px 20px;
     text-align: center;
-    background: #000;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 footer a{
     color: #0a0;
     text-decoration: none;
+}
+@media (max-width: 768px){
+    main{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .Hero,
+    .projects,
+    .tech,
+    .connect{
+        padding: 60px 20px;
+    }
+    .Hero h1,
+    .section-title{
+        font-size: 36px;
+    }
+    .projects-container{
+        grid-template-columns: 1fr;
+    }
+    .tech-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .connect-container{
+        grid-template-columns: 1fr;
+    }
+    .Hero p{
+        max-width: 100%;
+    }
 }

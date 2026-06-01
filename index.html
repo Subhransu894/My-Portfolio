@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.17.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
@@ -16,6 +17,9 @@
                 </span>
                 Subhransu Sekhara Behera
             </h2>
+            <button id="theme-toggle">
+               <i class="bi bi-sun-fill"></i>
+            </button>
         </nav>
     </header>
     <main>
@@ -24,14 +28,16 @@
             <h3>Full stack developer</h3>
             <p>Passionate full-satck developer crafting intuitive digital experiences with modern technologies.</p>
             <p>Specialize in React, Node.js , and MongoDB to build scalable and user-centered applications. </p>
-            <a href="#connect" class="btn-link">
-                <button class="btn-primary">Contact me</button>
+            <a href="#connect" class="btn-primary btn-link">
+                Contact me
             </a>
-            <a href="Resume/Subhransu Sekhara Behera Resume-1.pdf" 
-                class="btn-link" target="_blank" rel="noopener noreferrer"
-            >
-                <button class="btn-secondary">Resume</button>
-            </a> 
+
+            <a href="Resume/Subhransu Sekhara Behera Resume-1.pdf"
+                class="btn-secondary btn-link"
+                target="_blank"
+                rel="noopener noreferrer">
+                Resume
+            </a>
         </section>
 
         <section class="projects">
@@ -39,7 +45,7 @@
             <p class="section-subtitle">Building solutions that solve real-world problems.</p>
             <div class="projects-container">
                 <div class="project-card">
-                    <img src="http://picsum.photos/200/200?random=1" alt="placeholder">
+                    <img src="/images/Anvaya.png" alt="Anvaya App">
                     <div class="content">
                         <p class="project-title">Anvaya</p>
                         <p class="project-desc">An intuitive CRM system designed for lead management with pipeline visualization, 
@@ -52,11 +58,11 @@
                             <span>MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="demo-link">
+                            <a href="https://frontend-anvaya-crm-app.vercel.app/" target="_blank"  class="demo-link">
                                 <i class="fa-regular fa-eye"></i>
                                 Demo
                             </a>
-                            <a href="#" class="demo-link">
+                            <a href="https://github.com/Subhransu894/frontend-Anvaya-CRM-App" target="_blank"  class="demo-link">
                                 <i class="fa-solid fa-code"></i>
                                 Code
                             </a>
@@ -64,11 +70,11 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="http://picsum.photos/200/200?random=2" alt="placeholder">
+                    <img src="/images/Sms.png" alt="Student Management System">
                     <div class="content">
-                        <p class="project-title">MyShoppingApp</p>
-                        <p class="project-desc">A modern e-commerce platform with real-time inventory management, 
-                            secure payment processing, and personalized recommendations.
+                        <p class="project-title">Student Record Portal System</p>
+                        <p class="project-desc">A student management system that streamlines student record management 
+                        with efficient CRUD operations and centralized data storage.Built with a responsive interface for seamless data handling.
                         </p>
                         <div class="tech-stack">
                             <span>React</span>
@@ -77,11 +83,11 @@
                             <span>MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="demo-link">
+                            <a href="https://student-management-system-frontend-seven.vercel.app/" target="_blank"  class="demo-link">
                                 <i class="fa-regular fa-eye"></i>
                                 Demo
                             </a>
-                            <a href="#" class="demo-link">
+                            <a href="https://github.com/Subhransu894/Student-Management-System-Frontend" target="_blank"  class="demo-link">
                                 <i class="fa-solid fa-code"></i>
                                 Code
                             </a>
@@ -89,7 +95,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="http://picsum.photos/200/200?random=3" alt="placeholder">
+                    <img src="/images/Workasana.png" alt="Workasana">
                     <div class="content">
                         <p class="project-title">Workasana</p>
                         <p class="project-desc">
@@ -103,11 +109,11 @@
                             <span>MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="demo-link">
+                            <a href="https://workasana-frontend-nu.vercel.app/" target="_blank"  class="demo-link">
                                 <i class="fa-regular fa-eye"></i>
                                 Demo
                             </a>
-                            <a href="#" class="demo-link">
+                            <a href="https://github.com/Subhransu894/workasana-frontend" target="_blank" class="demo-link">
                                 <i class="fa-solid fa-code"></i>
                                 Code
                             </a>
@@ -172,9 +178,10 @@
 
         <footer>
             <p>&copy; Subhransu Sekhara Behera . All rights reserved</p>
-            <p>Built with ❤️ using Bootstrap and React.js</p>
+            <p>Built with ❤️ using CSS and Javascript</p>
             <p>Learning full stack developement at <a href="#">neoG.camp</a></p>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
