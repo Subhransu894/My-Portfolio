@@ -320,7 +320,9 @@ footer a{
     color: #0a0;
     text-decoration: none;
 }
-@media (max-width: 768px){
+/* Old Media Query */
+
+/* @media (max-width: 768px){
     main{
         padding-left: 20px;
         padding-right: 20px;
@@ -357,5 +359,115 @@ footer a{
     header nav h2{
         padding-left: 0;
         font-size: 16px;
+    }
+} */
+
+/* New media query , search from websites and using internet */
+
+@media (max-width: 768px){
+    main{
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 100px;
+    }
+    header nav{
+        padding: 15px 16px;
+    }
+
+    header nav h2{
+        padding-left: 0;
+        font-size: 15px;
+    }
+
+    #theme-toggle{
+        font-size: 20px;
+    }
+
+    .Hero,
+    .projects,
+    .tech,
+    .connect{
+        padding: 40px 0;
+    }
+
+    .Hero h1{
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .Hero h2{
+        font-size: 22px;
+    }
+
+    .Hero p{
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .section-title{
+        font-size: 32px;
+    }
+
+    .section-subtitle{
+        font-size: 16px;
+    }
+
+    .projects-container{
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .project-card img{
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content{
+        padding: 16px;
+    }
+
+    .project-title{
+        font-size: 22px;
+    }
+
+    .project-desc{
+        font-size: 15px;
+    }
+
+    .tech-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+    }
+
+    .tech-container span{
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+    .tech-container i{
+        font-size: 20px;
+    }
+
+    .connect-container{
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .connect-card{
+        padding: 16px;
+    }
+
+    .btn-link{
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    footer{
+        padding: 30px 10px;
+        font-size: 14px;
     }
 }
